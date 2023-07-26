@@ -2,8 +2,22 @@ package com.example.demo.mobel;
 
 import javax.swing.Spring;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+@Entity
+@Table(name="employee")
+
 public class Employee {
-	
+ @Id
+ @GeneratedValue(strategy = GenerationType.AUTO)
+		
+	private Integer id;
+	public Employee() {
+	super();
+}
 	private Integer employeeId;
 	private String firstname;
 	private String lastname;
@@ -14,11 +28,17 @@ public class Employee {
 	public void setEmployeeId(Integer employeeId) {
 		this.employeeId = employeeId;
 	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getFirstname() {
 		return firstname;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstname(String string) {
+		this.firstname = string;
 	}
 	public String getLastname() {
 		return lastname;
