@@ -59,6 +59,10 @@ public class Employee {
 		this.lastname = lastname;
 		this.salary = salary;
 	}
+	public static boolean isPresent() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 	
 
